@@ -7,7 +7,7 @@
     background-attachment: fixed;
     color: var(--text-color);
     font-family: var(--main-font), monospace;
-    margin: 0;
+    margin: 0 auto;
 
 }
 
@@ -29,7 +29,7 @@
     position: absolute;
     top: 10px;
     right: 20px;
-    color: var(--accent-color);
+    color: var(--header__theme);
     font-size: 18px;
     line-height: 25px;
     text-transform: uppercase;
@@ -41,10 +41,10 @@
     content: '';
     width: 9px;
     height: 9px;
-    background-color: var(--accent-color);
+    background-color: var(--header__theme);
     border-radius: 50%;
     transform: translateY(90%);
-    box-shadow: 0 0 4px 2px var(--accent-color);
+    box-shadow: 0 0 4px 2px var(--header__theme);
 }
 /* ==== ======================== ==== */
 
@@ -64,15 +64,15 @@
 .decorated-zone::before {
     top: 10px;
     right: 10px;
-    border-top: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
+    border-top: 1px solid var(--header__theme);
+    border-right: 1px solid var(--header__theme);
 }
 
 .decorated-zone::after {
     bottom: 10px;
     left: 10px;
-    border-bottom: 1px solid var(--accent-color);
-    border-left: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--header__theme);
+    border-left: 1px solid var(--header__theme);
 }
 /* ==== ===================== ==== */
 
@@ -91,7 +91,7 @@
 .header__theme-menu-button {
     background: transparent;
     border: none;
-    color: var(--accent-color);
+    color: var(--header__theme);
     font-size: 17px;
     text-transform: lowercase;
     min-height: 26px;
@@ -100,31 +100,39 @@
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--header__theme);
 }
 /* ==== ===================================== ==== */
 
+.header__description{
+    width: 47%;
+    min-width: 355px;
+    justify-self: end;
+}
+
 /* ==== Декорирование заголовка ==== */
 .header__title {
-    color: var(--text-title);
+    color: var(--header-title);
     font-weight: 700;
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     line-height: 83%;
-    text-shadow: 4px 4px 0 var(--bg-block-element);
+    text-shadow: 4px 4px 0 var(--accent-color);
+}
+/* ==== ======================= ==== */
+
+/* ==== Декорирование блока текста ==== */
+.title-decor {
+    background-color: var(--accent-color);
 }
 
-.description {
-    background-color: var(--bg-block-element);
-}
-
-.description p {
-    color: var(--text-block-color);
+.title-decor p {
+    color: var(--text-title-decor);
     font-weight: 700;
     font-size: 18px;
     line-height: 1.3;
-
 }
-/* ==== ======================= ==== */
+/* ==== ========================== ==== */
+
 
 
 
