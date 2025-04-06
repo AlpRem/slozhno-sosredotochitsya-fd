@@ -2,4 +2,129 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--main-font), monospace;
+    margin: 0;
 }
+
+.header {
+    min-height: 668px;
+    background-image: var(--bg-image-title);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    align-items: center;
+    padding: 10px;
+}
+
+/* ==== Декорирование записи REC ==== */
+.header__rec {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--accent-color);
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 10px;
+}
+
+.header__rec::after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transform: translateY(90%);
+    box-shadow: 0 0 4px 2px var(--accent-color);
+}
+/* ==== ======================== ==== */
+
+/* ==== Декорирование уголков ==== */
+.decorated-zone {
+    position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.decorated-zone::before {
+    top: 10px;
+    right: 10px;
+    border-top: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+    bottom: 10px;
+    left: 10px;
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+}
+/* ==== ===================== ==== */
+
+/* ==== Декорирование кнопок переключение тем ==== */
+.header__theme-menu {
+    justify-self: end;
+}
+
+.header__theme-menu-list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.header__theme-menu-button{
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    font-size: 17px;
+    text-transform: lowercase;
+    min-height: 26px;
+    min-width: 70px;
+    letter-spacing: 1px;
+}
+
+.header__theme-menu-button_active{
+    border: 1px solid var(--accent-color);
+}
+/* ==== ===================================== ==== */
+
+/* ==== Декорирование заголовка ==== */
+.header__title {
+    color: var(--text-title);
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 83%;
+    text-shadow: 4px 4px 0 var(--bg-block-element);
+}
+
+.description {
+    background-color: var(--bg-block-element);
+}
+
+.description p {
+    color: var(--text-block-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+
+}
+/* ==== ======================= ==== */
+
+
+
+
+
