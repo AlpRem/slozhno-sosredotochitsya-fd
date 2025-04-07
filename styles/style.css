@@ -6,20 +6,24 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--main-font), monospace;
     font-size: var(--base-font-size);
     margin: 0 auto;
+
 }
 
 .header {
     min-height: var(--header-min-height);
+    height: 100vh;
     position: relative;
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
     align-items: center;
     padding: var(--base-padding);
+
 }
 
 /* ==== Декорирование записи REC ==== */
@@ -123,15 +127,62 @@
 /* ==== Декорирование блока текста ==== */
 .title-decor {
     background-color: var(--accent-color);
-}
-
-.title-decor p {
     color: var(--text-title-decor);
     font-weight: 700;
     line-height: 1.3;
+    font-size: var(--base-font-size);
 }
 /* ==== ========================== ==== */
 
+.main{
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    padding: 40px var(--base-padding) 0 var(--base-padding);
+    gap: 50px;
+}
+
+.main__section-sm, .main__section-md {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 20px;
+}
+
+.main__section-sm_title {
+    color: var(--accent-color);
+    font-size: var(--base-font-size);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.main__section-sm_article {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 10px;
+}
+
+.main__section-sm_article_sub {
+    gap: 20px;
+}
+
+.main__section-md_sub {
+    gap: 10px;
+}
+
+.title-decor_sub {
+    font-weight: 400;
+}
+
+.main__section-sm_article_text {
+    line-height: 1.3;
+}
+
+.text-accent {
+    text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer{
+    height: 100vh;
+}
 
 @media (width >= 768px) {
     :root {

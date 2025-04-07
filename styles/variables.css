@@ -18,7 +18,7 @@
 
 
     --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    --header-min-height: 668px;
+    --header-min-height: 648px;
 
     --base-padding: 10px;
     --base-font-size: 18px;
