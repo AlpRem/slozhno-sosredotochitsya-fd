@@ -14,7 +14,7 @@
     --text-title-decor: var(--bg-color);
     --section-title-color: var(--accent-color);
     --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    --header-min-height: 648px;
+    --header_footer-min-height: 648px;
     --base-padding: 10px;
     --base-font-size: 18px;
     --main-font: 'IBM Plex mono';

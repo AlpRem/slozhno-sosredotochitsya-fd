@@ -280,6 +280,10 @@
             grid-auto-flow: dense;
         }
 
+        .main__section-list-image {
+            object-position: center;
+        }
+
         .main__section-list-image:nth-child(1) {
             grid-column: 1 / 3;
             grid-row: 1;
@@ -308,7 +312,7 @@
 
     @media (width >= 1024px) {
         :root {
-            --header-min-height: 768px;
+            --header_footer-min-height: 768px;
         }
 
         .header__theme-menu-list {
