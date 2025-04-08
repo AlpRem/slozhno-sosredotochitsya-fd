@@ -216,8 +216,11 @@
     }
 
     .text-accent:focus {
+        outline: none;
+    }
+
+    .text-accent:focus-visible {
         outline: 1px solid var(--text-color);
-        cursor: pointer;
     }
 
     .text-accent:hover {
@@ -336,6 +339,4 @@
             gap: 20px;
         }
     }
-
-
 
