@@ -31,7 +31,7 @@
     position: absolute;
     top: var(--base-padding);
     right: calc(10px + var(--base-padding));
-    color: var(--header__theme);
+    color: var(--header__theme-color);
     line-height: 25px;
     text-transform: uppercase;
     display: flex;
@@ -42,10 +42,10 @@
     content: '';
     width: 9px;
     height: 9px;
-    background-color: var(--header__theme);
+    background-color: var(--header__theme-color);
     border-radius: 50%;
     align-self: center;
-    box-shadow: 0 0 4px 2px var(--header__theme);
+    box-shadow: 0 0 4px 2px var(--header__theme-color);
 }
 /* ==== ======================== ==== */
 
@@ -67,15 +67,15 @@
 .decorated-zone::before {
     top: var(--base-padding);
     right: var(--base-padding);
-    border-top: 1px solid var(--header__theme);
-    border-right: 1px solid var(--header__theme);
+    border-top: 1px solid var(--header__theme-color);
+    border-right: 1px solid var(--header__theme-color);
 }
 
 .decorated-zone::after {
     bottom: var(--base-padding);
     left: var(--base-padding);
-    border-bottom: 1px solid var(--header__theme);
-    border-left: 1px solid var(--header__theme);
+    border-bottom: 1px solid var(--header__theme-color);
+    border-left: 1px solid var(--header__theme-color);
 }
 /* ==== ===================== ==== */
 
@@ -95,7 +95,7 @@
 .header__theme-menu-button {
     background: transparent;
     border: none;
-    color: var(--header__theme);
+    color: var(--header__theme-color);
 
     text-transform: lowercase;
     min-height: 26px;
@@ -104,7 +104,7 @@
 }
 
 .header__theme-menu-button:hover {
-    outline: 1px solid color-mix(in srgb, var(--header__theme) 40%, transparent);
+    outline: 1px solid color-mix(in srgb, var(--header__theme-color) 40%, transparent);
     cursor: pointer;
 }
 
@@ -121,15 +121,15 @@
     bottom: 0;
     width: 100%;
     height: 1px;
-    background: color-mix(in srgb, var(--header__theme) 40%, transparent);
+    background: color-mix(in srgb, var(--header__theme-color) 40%, transparent);
 }
 
 .header__theme-menu-button_active {
-    outline: 1px solid var(--header__theme);
+    outline: 1px solid var(--header__theme-color);
 }
 
 .header__theme-menu-button_active:hover {
-    outline: 1px solid var(--header__theme);
+    outline: 1px solid var(--header__theme-color);
     cursor: default;
 }
 /* ==== ===================================== ==== */
@@ -142,7 +142,7 @@
 
 /* ==== Декорирование заголовка ==== */
 .text-title {
-    color: var(--header-title);
+    color: var(--header-title-color);
     font-weight: 700;
     font-size: var(--font-size-title);
     line-height: 83%;
