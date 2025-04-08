@@ -96,11 +96,9 @@
     background: transparent;
     border: none;
     color: var(--header__theme-color);
-
     text-transform: lowercase;
-    min-height: 26px;
     min-width: 70px;
-    letter-spacing: 1px;
+    letter-spacing: 0.1px;
 }
 
 .header__theme-menu-button:hover {
@@ -247,6 +245,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.footer-title {
+    text-shadow: 2px 2px 0 var(--text-title-shadow);
+}
 /* ==== ========================== ==== */
 
 @media (width >= 768px) {
@@ -256,8 +258,8 @@
         --header-min-height: 1024px;
     }
 
-    .header {
-        padding-left: 0;
+    .header__title {
+        margin-left: -20px;
     }
 
     .main {
