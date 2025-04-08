@@ -115,13 +115,14 @@
 }
 
 /* ==== Декорирование заголовка ==== */
-.header__title {
+.text-title {
     color: var(--header-title);
     font-weight: 700;
     font-size: var(--font-size-title);
     line-height: 83%;
     text-shadow: 4px 4px 0 var(--accent-color);
 }
+
 /* ==== ======================= ==== */
 
 /* ==== Декорирование блока текста ==== */
@@ -132,57 +133,70 @@
     line-height: 1.3;
     font-size: var(--base-font-size);
 }
-/* ==== ========================== ==== */
 
-.main{
-    display: grid;
-    grid-template-rows: repeat(2, min-content);
-    padding: 40px var(--base-padding) 0 var(--base-padding);
-    gap: 50px;
-}
-
-.main__section-sm, .main__section-md {
-    display: grid;
-    grid-template-rows: min-content min-content;
-    gap: 20px;
-}
-
-.main__section-sm_title {
-    color: var(--accent-color);
-    font-size: var(--base-font-size);
-    line-height: 1.3;
-    font-weight: 700;
-}
-
-.main__section-sm_article {
-    display: grid;
-    grid-template-rows: min-content min-content;
-    gap: 10px;
-}
-
-.main__section-sm_article_sub {
-    gap: 20px;
-}
-
-.main__section-md_sub {
-    gap: 10px;
-}
-
-.title-decor_sub {
+.title-decor-light {
     font-weight: 400;
 }
+/* ==== ========================== ==== */
 
-.main__section-sm_article_text {
+
+/* ==== Декорирование блока main ==== */
+.main {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    padding: 40px var(--base-padding) 40px var(--base-padding);
+    gap: 50px;
     line-height: 1.3;
+}
+
+.main__section-list {
+    list-style-type: none;
+}
+
+.main__section-list-item:not(:last-child) {
+    padding-bottom: 20px;
+}
+
+.main_section-title {
+    font-size: var(--base-font-size);
+    color: var(--accent-color);
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.main__section-list-text {
+    padding-top: 10px;
+}
+
+.main__section-list-images {
+    padding-top: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 10px;
+}
+
+.main__section-list-image {
+    max-width: 100%;
 }
 
 .text-accent {
     text-shadow: 2px 2px 0 var(--accent-color);
+    text-decoration: none;
+}
+/* ==== ======================== ==== */
+
+/* ==== Декорирование блока footer ==== */
+.footer {
+    display: flex;
+    height: 100vh;
+    padding: 0 var(--base-padding) 0 var(--base-padding);
 }
 
-.footer{
-    height: 100vh;
+.footer-title {
+    justify-self: center;
+    align-self: center;
 }
+/* ==== ========================== ==== */
 
 @media (width >= 768px) {
     :root {
