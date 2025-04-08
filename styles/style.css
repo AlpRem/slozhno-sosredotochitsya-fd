@@ -16,7 +16,7 @@
     }
 
     .header {
-        min-height: var(--header-min-height);
+        min-height: var(--header_footer-min-height);
         height: 100vh;
         position: relative;
         display: grid;
@@ -32,7 +32,7 @@
         top: var(--base-padding);
         right: calc(10px + var(--base-padding));
         color: var(--header__theme-color);
-        line-height: 25px;
+        line-height: 1.39;
         text-transform: uppercase;
         display: flex;
         gap: 10px;
@@ -94,41 +94,25 @@
 
     .header__theme-menu-button {
         background: transparent;
-        border: none;
+        border: 1px solid transparent;
         color: var(--header__theme-color);
         text-transform: lowercase;
         min-width: 70px;
-        letter-spacing: 0.1px;
+        cursor: pointer;
     }
 
     .header__theme-menu-button:hover {
         outline: 1px solid color-mix(in srgb, var(--header__theme-color) 40%, transparent);
-        cursor: pointer;
     }
 
     .header__theme-menu-button:focus {
         outline: none;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .header__theme-menu-button:focus::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background: color-mix(in srgb, var(--header__theme-color) 40%, transparent);
+        border-bottom: 1px solid color-mix(in srgb, var(--header__theme-color) 40%, transparent);
     }
 
     .header__theme-menu-button_active {
         outline: 1px solid var(--header__theme-color);
-    }
-
-    .header__theme-menu-button_active:hover {
-        outline: 1px solid var(--header__theme-color);
-        cursor: default;
+        pointer-events: none;
     }
     /* ==== ===================================== ==== */
 
@@ -202,6 +186,7 @@
         display: grid;
         grid-template-rows: repeat(3, min-content);
         gap: 10px;
+
     }
 
     .main__section-list-image {
@@ -213,6 +198,7 @@
     .text-accent {
         text-shadow: 2px 2px 0 var(--text-title-shadow);
         text-decoration: none;
+        border: 1px solid transparent;
     }
 
     .text-accent:focus {
@@ -225,23 +211,14 @@
 
     .text-accent:hover {
         outline: none;
-        position: relative;
-        cursor: pointer;
+        border-bottom: 1px solid var(--text-color);
     }
 
-    .text-accent:hover::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background: var(--text-color);
-    }
     /* ==== ======================== ==== */
 
     /* ==== Декорирование блока footer ==== */
     .footer {
+        min-height: var(--header_footer-min-height);
         display: flex;
         height: 100vh;
         padding: 0 var(--base-padding) 0 var(--base-padding);
@@ -254,11 +231,25 @@
     }
     /* ==== ========================== ==== */
 
+    .main__section-content--block-content {
+        margin-bottom: 20px;
+    }
+
+    .main__section-images {
+        grid-column: 2 / -1;
+    }
+
+    .main__section-array-images {
+        display: flex;
+        flex-direction: column;
+    }
+
     @media (width >= 768px) {
         :root {
             --base-padding: 20px;
             --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-            --header-min-height: 1024px;
+            --header_footer-min-height: 1024px;
+
         }
 
         .header__title {
@@ -276,7 +267,7 @@
             gap: 20px;
         }
 
-        .full-row {
+        .main__section-content--transformation-column {
             grid-column: 1 / -1;
         }
 
@@ -333,7 +324,8 @@
             inline-size:  47.8vw;
         }
 
-        .divide-in-columns {
+        .main__section-content--transformation-column {
+            grid-column: 1 / -1;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
