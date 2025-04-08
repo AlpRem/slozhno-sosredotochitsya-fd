@@ -12,14 +12,15 @@
 
     --bg-color: #FFF1F7;
     --bg-image-title: url('../images/cover-image-light.png');
-
     --text-color: #353430;
     --accent-color: #FF8DCB;
 
-    --text-title-decor: #353430;
+    --header__theme: var(--text-color);
     --header-title: #FFC2E6;
-    --header__theme: #353430;
+    --text-title-shadow: var(--accent-color);
 
+    --text-title-decor: var(--text-color);
+    --section-title-color: var(--text-color);
 }
 
 .theme-light .page {
